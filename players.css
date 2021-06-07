@@ -1,0 +1,52 @@
+#players-profile-section{
+    background: linear-gradient(135deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7));
+    min-height: 50vh;
+    color: #fff;
+    padding: 1.2rem 3rem;
+}
+
+#players-profile-section .profile-card{
+    width: 40%;
+    padding: 10px 0px 20px 0;
+    background: rgba(0,0,0,0.1);
+    margin: 0px auto;
+    margin-bottom: 5px;
+}
+
+#players-profile-section .profile-card .logo-title{
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    margin: 10px 10px;
+    color: #fff;
+   
+}
+
+#players-profile-section .profile-card .logo-title img{
+    width: 90%;
+    border-radius: 30px;
+
+}
+
+
+#players-profile-section .profile-card .players-details{
+    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#players-profile-section .profile-card .players-details h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#players-profile-section .profile-card .players-details p{
+    margin: 10px 0;
+}
+#players-profile-section .profile-card .players-details p span{
+    color: #F9D423;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

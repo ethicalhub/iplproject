@@ -1,0 +1,155 @@
+#team-profile-section{
+    background: linear-gradient(135deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7));
+    min-height: 50vh;
+    color: #fff;
+    padding: 1.2rem 3rem;
+}
+
+#team-profile-section .profile-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.1);
+    width: 70%;
+    margin: 0px auto;
+}
+
+#team-profile-section .profile-card .logo-title{
+    width: 350px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    margin: 10px 10px;
+    color: #fff;
+   
+}
+
+#team-profile-section .profile-card .logo-title img{
+    
+    width: 100%;
+    border-radius: 30px;
+
+}
+
+#team-profile-section .profile-card .logo-title h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#team-profile-section .profile-card .team-details{
+    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#team-profile-section .profile-card .team-details p{
+    margin: 10px;
+    padding: 5px;
+}
+#team-profile-section .profile-card .team-details p span{
+    color: #F9D423;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.special{
+    display: inline-block;
+    margin: 10px;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: rgba(255, 0, 204, 1);
+}
+
+
+
+#team-players .players-section{
+    padding: 1.2rem 3rem;
+    margin: 50px 0;
+}
+
+
+#team-players .players-section h3{
+    background: -webkit-linear-gradient(90deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 01));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#team-players .players-section p{
+    margin: 25px 10px 50px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 100;
+}
+
+#team-players .players-section .players-card-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+.card {
+    cursor: pointer;
+    background-color: transparent;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .card-back {
+    background-color: rgba(51, 51,153, 1);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px 20px;
+
+  }
+
+  #team-players .players-section .players-card-section .card .card-inner .card-back h4{
+      text-align: left;
+      font-size: 1rem;
+      color:#fff;
+      margin-top: 20px;
+  }
+
+  #team-players .players-section .players-card-section .card .card-inner .card-back  p{
+    text-align: left;
+    font-size: 0.7rem;
+    margin: 10px;
+    padding: 10px;
+  }

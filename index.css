@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition:  all .1s linear;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff;
+}
+
+/* Navbar Styles start */
+.navbar{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    background: -webkit-linear-gradient(150deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+}
+
+.navbar .logo img{
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 10px;  
+    cursor: pointer; 
+}
+
+.navbar .logo h3{
+    font-size: 1.1em;
+    margin-left: 5px;
+    color: rgba(255, 0, 204, 1);
+    cursor: pointer;
+}
+
+.navbar .menu-search input[type=text]{
+        background-color: ghostwhite;
+        padding: 8px;
+        border: 2px solid rgba(255, 0, 204, 1);
+        font-size: 1rem;
+}
+
+.navbar .menu-search button{
+    background-color: ghostwhite;
+    padding: 8px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 0, 204, 1);
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.navbar .menu a{
+    list-style: none;
+    display: inline-block;
+    margin-right: 25px;
+    color: rgba(255, 0, 204, 1) ;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.navbar .menu a:hover{
+    border-bottom: 1px solid rgba(51, 51,153, 01);
+}
+.navbar .menu a:last-child{
+    list-style: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7))
+}
+/* Navbar Styles End */
+
+/* Hero Section Styles Start */
+
+.hero-section{
+    background-image: linear-gradient(135deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7)), url('./images/01.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.hero-section .hero-content{
+    text-align: center;
+}
+
+.hero-section .hero-content h1{
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-section .hero-content p{
+    font-size: 1.4rem;
+    margin: 30px auto;
+    line-height: 1.4;
+    letter-spacing: 100;
+    width: 70%;
+    
+}
+
+.hero-section .hero-content a{
+    display: inline-block;
+    margin-top: 30px;
+    list-style: none;
+    color: #fff;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: rgba(255, 0, 204, 1);
+}
+
+
+
+
+/* Hero Section Styles End */
+
+/* Team Section Styles Start */
+
+#team .team-section{
+    padding: 1.2rem 3rem;
+    margin: 50px 0;
+}
+
+#team .team-section h3{
+    background: -webkit-linear-gradient(90deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 01));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+#team .team-section p{
+    margin: 25px 10px 50px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 100;
+  
+}
+
+#team .team-section .card-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#team .team-section .card-section .card{
+    width: 250px;
+    height: 220px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 15px 25px;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    color: #fff;
+    
+    /* background: rgba(51, 51,153, 1) */
+}
+
+#team .team-section .card-section .card1{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/csk.png');
+}
+
+#team .team-section .card-section .card2{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/dc.jpg');
+}
+
+#team .team-section .card-section .card3{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/kkr.jpg');
+}
+
+#team .team-section .card-section .card4{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/kxip.jpg');
+}
+
+#team .team-section .card-section .card5{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/mi.jpg');
+}
+
+#team .team-section .card-section .card6{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/rcb.jpg');
+}
+
+#team .team-section .card-section .card7{
+    background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url('./images/rr.jpg');
+}
+
+#team .team-section .card-section .card8{
+    background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(255, 0, 204, 0.4)),url('./images/srh.jpg');
+}
+#team .team-section .card-section .card:hover{
+    transform: translateY(-10px);
+}
+
+
+#team .team-section .card-section .card{
+    width: 250px;
+    height: 220px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 15px 25px;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    color: #fff;
+    
+    /* background: rgba(51, 51,153, 1) */
+}
+
+
+/* Team Section Styles End */
+
+
+
+/* Footer Styles Begin*/
+
+footer p{
+    background: linear-gradient(135deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7));
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-weight: 500;
+    letter-spacing: 100;
+}
+
+/* Footer Styles End */
