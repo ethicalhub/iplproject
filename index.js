@@ -1,43 +1,24 @@
 console.log('Server Connected')
 
-var a =''
-document.getElementById('chennai').onclick = function(){
-   a='chennai'
-   sessionStorage.setItem("check", JSON.stringify({tema: a}));
+var localData = JSON.parse(localStorage.getItem('data'))
+var cardSection = document.getElementById('card-section')
+
+function createTeamCard(){
+    for(let i =0; i<localData.length; i++){
+        var hLink = document.createElement('a') 
+        var hDiv = document.createElement('div')
+        var hH5 = document.createElement('h5') 
+        hLink.href='./team.html'
+        hDiv.classList = 'card'
+        hDiv.style=`background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url(${localData[i].teamIcon}); background-position: center; background-size: cover;`
+        hDiv.onclick= function(){
+            sessionStorage.setItem('check' , localData[i].fullName)
+        }
+        hH5.innerText=localData[i].fullName
+        hLink.appendChild(hDiv)
+        hDiv.appendChild(hH5)
+        cardSection.appendChild(hLink)
+    }
 }
 
-document.getElementById('delhi').onclick = function(){
-    a='delhi'
-    sessionStorage.setItem("check", JSON.stringify({tema: a}));
-}
-
-document.getElementById('kolkata').onclick = function(){
-    a='kolkata'
-    sessionStorage.setItem("check",JSON.stringify({tema: a}));
-}
-
-document.getElementById('punjab').onclick = function(){
-    a='punjab'
-    sessionStorage.setItem("check", JSON.stringify({tema: a}));
-}
-
-document.getElementById('mumbai').onclick = function(){
-    a='mumbai'
-    sessionStorage.setItem("check", JSON.stringify({tema: a}));
-}
-
-document.getElementById('bangalore').onclick = function(){
-    a='bangalore'
-    sessionStorage.setItem("check", JSON.stringify({tema: a}));
-}
-
-document.getElementById('rajhasthan').onclick = function(){
-    a='rajhasthan'
-    sessionStorage.setItem("check", JSON.stringify({tema: a}));
-}
-
-document.getElementById('hyderabad').onclick = function(){
-    a='hyderabad'
-    sessionStorage.setItem("check", JSON.stringify({tema: a}));
-}
-
+createTeamCard()
