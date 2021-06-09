@@ -37,7 +37,7 @@ const teamInfo = [{
     bestBowl:'Kagiso Rabda',
     message:'Rishabh Pant is on Fire...',
     players: [{
-      id: 200,
+     id: 200,
      playerName: "Rishabh Pant",
      from: "DC",
      price: "3.80 Cr",

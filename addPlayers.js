@@ -9,7 +9,7 @@ document.getElementById('submit').onclick = function (){
         var isPlayingNew = document.getElementById('isPlayingNew').value.toLowerCase() 
 
 
-    var update= data =  {
+    var data =  {
         id: 110,
         playerName: playerNameNew,
         from: fromNew,
@@ -18,8 +18,9 @@ document.getElementById('submit').onclick = function (){
         description: descriptionNew,
         image:imageNew
       }
+
    var mu = JSON.parse(localStorage.getItem('data'))
-   console.log(mu)
+
 
    for(let i = 0; i<mu.length; i++){
        if(mu[i].key === fromNew){
@@ -28,6 +29,7 @@ document.getElementById('submit').onclick = function (){
    }
 
    localStorage.setItem('data', JSON.stringify(mu))
+//    sessionStorage.setItem('newEntry' , JSON.stringify({playerAdded : data.from }))
 
 }
 

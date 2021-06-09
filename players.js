@@ -1,22 +1,15 @@
-console.log('Players Connected')
 var localData0 = JSON.parse(localStorage.getItem('data'))
-console.log(localData0)
-var sessionData = sessionStorage.getItem('check')
-
-console.log(localData0, sessionData)
-
+var sessionData = JSON.parse(sessionStorage.getItem('check'))
 var profileCard = document.getElementById('profile-card')
 
 
 for(let i =0; i<localData0.length; i++){
-    for(let j=i; j<localData0[i].players.length; j++ ){
-
-        if(localData0[i].players[j].playerName == sessionData){
+    for(let j=0; j<localData0[i].players.length; j++ ){
+        if(localData0[i].players[j].playerName.toLowerCase() == sessionData.player.toLowerCase()){
             createPlayerCard(i,j)
         }
     }
 }
-
 
 function createPlayerCard(i,j){
      pDiv = document.createElement('div')
@@ -26,17 +19,22 @@ function createPlayerCard(i,j){
      pDiv.appendChild(pImg)
 
      pDetails = document.createElement('div')
-     pDetails.class = 'players-details'
+     pDetails.className = 'players-details'
+
      pName = document.createElement('h3')
      pName.innerText = localData0[i].players[j].playerName
+
      pRole = document.createElement('p')
-     pRole.innerHtml = `Role <span> ${localData0[i].players[j].description} </span>`
+     pRole.innerHTML =  `Role <span> ${localData0[i].players[j].description}</span>`
+
      pTeam = document.createElement('p')
-     pTeam.innerHtml = `Team  <span> ${localData0[i].players[j].description} </span> `
+     pTeam.innerHTML = `Team  <span> ${localData0[i].players[j].from} </span>
+      `
      pPrice = document.createElement('p')
-     pPrice.innerHtml = `Price <span> ${localData0[i].players[j].description} </span>`
+     pPrice.innerHTML = `Price <span> ${localData0[i].players[j].price} </span>`
+
      pStatus = document.createElement('p')
-     pStatus.innerHtml = `Playing Status <span> ${localData0[i].players[j].description} </span>`
+     pStatus.innerHTML = `Playing Status <span> ${localData0[i].players[j].description} </span>`
 
      pDetails.appendChild(pName)
      pDetails.appendChild(pRole)
@@ -44,6 +42,7 @@ function createPlayerCard(i,j){
      pDetails.appendChild(pTeam)
      pDetails.appendChild(pPrice)
      pDetails.appendChild(pStatus)
-}
 
-// createPlayerCard()
+     profileCard.appendChild(pDiv)
+     profileCard.appendChild(pDetails)
+}
