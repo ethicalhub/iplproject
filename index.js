@@ -12,7 +12,7 @@ function createTeamCard(){
         hDiv.classList = 'card'
         hDiv.style=`background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(255, 0, 204, 0.3)),url(${localData[i].teamIcon}); background-position: center; background-size: cover;`
         hDiv.onclick= function(){
-            sessionStorage.setItem('check' , JSON.stringify({team: localData[i].fullName , player: ''}))
+            sessionStorage.setItem('check' , JSON.stringify({team: localData[i].key , player: ''}))
         }
         hH5.innerText=localData[i].fullName
         hLink.appendChild(hDiv)

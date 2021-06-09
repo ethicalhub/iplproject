@@ -5,8 +5,6 @@ console.log(newData)
 var goal = JSON.parse(sessionStorage.getItem('check'))
 console.log(goal)
 
-// var newPlayerAdd = JSON.parse(sessionStorage.getItem('newEntry'))
-// console.log(newPlayerAdd)
 
 var mainCard = document.getElementById('main-card')
 var imageFDiv = document.getElementById('card-front')
@@ -14,7 +12,7 @@ var imageBDiv = document.getElementById('card-back')
 
 function TeamDetails(){
     for(let i=0; i<newData.length; i++){
-        if(newData[i].fullName === goal.team){
+        if(newData[i].key === goal.team){
             ren1(i)
         }
     }
@@ -43,7 +41,7 @@ function ren1(i){
         var mainSection = document.createElement('div')
         mainSection.className = 'card' 
         mainSection.onclick = function(){
-            sessionStorage.setItem('check' , JSON.stringify({team: newData[i].fullName ,player : newData[i].players[x].playerName}))
+            sessionStorage.setItem('check' , JSON.stringify({team: newData[i].key, player : newData[i].players[x].playerName}))
         }
         
         var mainCard = document.createElement('div')

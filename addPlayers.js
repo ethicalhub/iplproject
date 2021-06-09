@@ -29,7 +29,7 @@ document.getElementById('submit').onclick = function (){
    }
 
    localStorage.setItem('data', JSON.stringify(mu))
-//    sessionStorage.setItem('newEntry' , JSON.stringify({playerAdded : data.from }))
+   sessionStorage.setItem('check' , JSON.stringify({team: fromNew ,player : ''}))
 
 }
 

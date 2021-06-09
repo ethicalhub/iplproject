@@ -47,3 +47,8 @@
     font-weight: 700;
     background: linear-gradient(135deg, rgba(255, 0, 204, 1), rgba(51, 51,153, 0.7))
 }
+
+.add-player-section .form-section .form-main form input:last-child:hover{
+    color: #fff;
+    background:rgba(51, 51,153, 0.7) ;
+}

@@ -39,10 +39,10 @@
         <h3> Add New Players </h3>
         <div class="form-main" >
             <form id="myForm" action='/'> 
-                <input type="text" placeholder="Enter Player Name" name=" playerName" id="playerNameNew"/>
-                <input type="text" placeholder="Enter Image URL" name=" Image" id="imageNew"/>
-                <input type="text" placeholder="Enter Player Role" name=" description" id="descriptionNew" />                
-                <select name="fromNew" id="fromNew">
+                <input type="text" required placeholder="Enter Player Name" name=" playerName" id="playerNameNew"/>
+                <input type="text" required placeholder="Enter Image URL" name=" Image" id="imageNew"/>
+                <input type="text" required placeholder="Enter Player Role" name=" description" id="descriptionNew" />                
+                <select name="fromNew" id="fromNew" required>
                     <option value="CSK">Select Team</option>
                     <option value="CSK">CSK</option>
                     <option value="DC">DC</option>
@@ -54,9 +54,9 @@
                     <option value="SRH">SRH</option>
                 </select>                
                 
-                <input type="text" placeholder="Enter Player Price" name="price" id="priceNew" />
-                <input type="text" placeholder="Enter Playing Status"name='isPlaying' id="isPlayingNew" />
-                <a href="./index.html"><input type="button" id="submit" value="Add New Player" /></a>
+                <input type="text" required placeholder="Enter Player Price" name="price" id="priceNew" />
+                <input type="text" required placeholder="Enter Playing Status"name='isPlaying' id="isPlayingNew" />
+                <a href="./team.html"><input type="button" id="submit" value="Add New Player" /></a>
             </form>
         </div>
     </div>
