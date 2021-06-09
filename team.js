@@ -43,7 +43,7 @@ function ren1(i){
         var mainSection = document.createElement('div')
         mainSection.className = 'card' 
         mainSection.onclick = function(){
-            sessionStorage.setItem('check' , JSON.stringify({player : newData[i].players[x].playerName}))
+            sessionStorage.setItem('check' , JSON.stringify({team: newData[i].fullName ,player : newData[i].players[x].playerName}))
         }
         
         var mainCard = document.createElement('div')
